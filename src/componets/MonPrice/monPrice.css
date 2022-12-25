@@ -1,0 +1,322 @@
+body {
+   font-family: 'Montserrat', sans-serif;
+   color: #000000;
+   margin: 0;
+}
+
+*,
+* ::before,
+* ::after{
+   box-sizing: border-box;
+}
+
+h1, h1, h3, h4, h5, h6{
+   margin: 0%;
+}
+.containerMon {
+   width: 100%;
+   max-width: 1200px;
+   margin: 0 auto;
+}
+
+/* шапка */
+.headerMon{
+   padding: 35px 0;
+   background-color: rgb(161, 161, 161);
+   opacity: 80%;
+   height: 40px;
+   position: fixed;
+   top: 0%;
+   left: 0%;
+   z-index: 1000;
+   width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.header__iner{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+/* навигация конпки */
+
+.nav{
+   font-size: 14px;
+   font-weight: 700;
+   margin: auto;
+   display: flex;
+
+}
+
+.nav__link{
+   color: black;
+   text-decoration: none;
+   margin-left: 81px;
+}
+.nav__link:hover{
+   text-decoration: underline;
+   color: cornsilk;
+}
+
+/* главная страница */
+
+.intro{
+height: 950px;
+background:url("../../img/smt_1596466666.jpg");
+padding-top: 70px;
+display: flex;
+ flex-direction: column;
+ justify-content: center;
+ text-align: center;
+
+}
+
+.intro__title{
+font-size: 40px;
+font-weight: 800;
+margin: 0% auto;
+text-align: center;
+color: rgb(0, 0, 0);
+}
+
+.intro__iner{
+   width: 100%;
+   max-width: 300px;
+   margin: 0 auto;
+}
+
+/* кнопка регистрация */
+
+.btn{
+   display: inline-block;
+   vertical-align: top;
+   font-size: 14px;
+   color: white;
+   font-weight: 400;
+   text-decoration: none;
+   padding: 15px 40px;
+   border-radius: 10px;
+   margin-top: 50px;
+}
+
+.btn--blue{
+   background-color: rgb(40, 218, 200) ;
+}
+
+.btn--blue:hover{
+   background-color: rgb(13, 167, 151);
+   transition: 0.4s linear;
+}
+
+.btn--long{
+   min-width: 200px;
+}
+
+
+/* Второй блок */
+
+
+.feature__icon{
+  margin-bottom: 20px;
+
+}
+
+.features__item {
+   width: 33.33333%;
+   text-align: center;
+   padding: 0 35px;
+   margin-top: 60px;
+   margin-bottom: 60px;
+}
+
+.features{
+   display: flex;
+  margin: 100px 0;
+  flex-wrap: wrap;
+  color: #000000;
+}
+
+.feature__title{
+   margin-bottom: 18px;
+}
+
+.feature__text{
+   text-transform: uppercase;
+   font-size: 12px;
+}
+
+
+
+/* Галерея  */
+
+.galary{
+display: flex;
+flex-wrap: wrap;
+}
+
+.galary__item{
+   width: 25%;
+   position: relative;
+   height: 400px;
+   overflow: hidden;
+}
+
+.galary__item:hover .galary__content{
+opacity: 1;
+transition: 0.4s linear;
+}
+
+.galary__content{
+width: 100%;
+height: 400px;
+top: 0;
+left: 0;
+z-index: 2;
+position: absolute;
+background-color: rgb(232, 69,69,.9);
+display: flex;
+flex-direction: column;
+justify-content: center;
+text-align: center;
+opacity: 0;
+}
+
+
+.photo{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   z-index: 1;
+
+   transform: translate3d(-50%, -50%, 0);
+}
+
+/* Специалисты  */
+
+.team{
+   margin: 100px 0;
+}
+
+.team__iner{
+display: flex;
+flex-wrap: wrap;
+}
+
+.team__item{
+   width: 25%;
+   justify-content: center;
+   margin-left: 70px;
+   padding: 0 15px;
+}
+
+.team__photo{
+display: block;
+max-width: 100%;
+height: auto;
+margin-bottom: 20px;
+}
+
+.team__name{
+margin-bottom: 24px;
+}
+
+.team__special{
+margin-bottom: 20px;
+color: red;
+}
+
+.team__text{
+   font-size: 14px;
+}
+
+
+      /*  Отзывы  */
+
+      .previu{
+         background-color: rgb(150, 95, 150);
+      }
+
+      .previu__item{
+         display: flex;
+         flex-wrap: wrap;
+      }
+
+      .previu__photo{
+         width: 50%;
+         height: 640px;
+         position: relative;
+         
+      }
+
+      .previu__content{
+         display: flex;
+         width: 50%;
+         margin: 0 auto;
+         justify-content: center;
+         flex-direction: column;
+
+      }
+
+      .previu__text{
+         color:rgb(255, 255, 255);
+         font-size: 20px;
+         padding-left: 80px;
+         padding-bottom: 20px ;
+         
+      }
+
+      .previu__author{
+         color: white;
+         font-size: 14px;
+         padding-left: 80px;
+      }
+
+      .previu__img{
+         top: 0;
+         right: 0;
+         z-index: 1;
+         position: absolute;
+      }
+        /* Регистрация */
+      .registr{
+         margin: 100px 0;
+      }
+      .registr__title{
+         text-align: center;
+         font-size: 28px;
+         margin-bottom: 10px;
+      }
+      .registr__text{
+         font-size: 16px;
+      }
+
+
+      .over{
+         padding: 5px 0;
+         text-align: center;
+         background-color: rgb(0, 0, 0);
+      }
+
+      .footer__iner{
+         flex-wrap: wrap;
+         display:flex ;
+      }
+
+      .footer__blok{
+         width: 33.333%;
+         color: rgb(107, 106, 99);
+      }
+
+
+      .footer__text{
+       font-size: 18px;
+       margin-bottom: 5px;
+      }
+
+      .footer__title{
+      font-size: 16px;
+      margin-bottom: 5px;
+      }

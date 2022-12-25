@@ -1,0 +1,283 @@
+/* body{
+   margin: 0;
+   box-sizing: border-box;
+}
+p{
+   margin: 0;
+} */
+.letter {
+   width: 700px;
+   height: 1109px;
+   background-color: #1F2537;
+   text-align: center;
+}
+.letter_container {
+   width: 637px;
+}
+.letter_link {
+   padding: 45px 0;
+   color: #ffffff;
+}
+.letter_blok-text {
+   color: #ffffff;
+   font-family: 'Architects Daughter';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 32px;
+   line-height: 43px;
+}
+.letter_blok-text-dark {
+   color: #1F2537;
+   font-family: 'Architects Daughter';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 32px;
+   line-height: 43px;
+}
+.letter_text {
+   padding-top: 15px;
+   color: #ffffff;
+   font-family: 'Architects Daughter';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 25px;
+   line-height: 35px;
+}
+.letter_text-rice {
+   background-color: #E31837;
+   color: #ffffff;
+   border-radius: 50%;
+   padding: 5px;
+}
+.letter_red-link {
+   text-decoration: none;
+   background-color: #E31837;
+   padding: 19px 62px;
+   border-radius: 100px;
+   color: #ffffff;
+   font-family: 'Architects Daughter';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 25px;
+   line-height: 33px;
+   text-transform: uppercase;
+}
+.letter_chees {
+   margin-top: 15px;
+   padding-right: 30px;
+}
+.letter_footer-link {
+   color: #ffffff;
+   font-family: 'Architects Daughter';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 21px;
+   width: 300px;
+}
+.letter_tfoot {
+   position: relative;
+}
+.letter_pizza {
+   position: absolute;
+   bottom: -9px;
+   left: 0;
+}
+.letter_footer-link {
+   position: absolute;
+   left: 290px;
+   bottom: 0;
+}
+.letter_footer-link-container {
+   position: relative;
+   width: 300px;
+   height: 250px;
+}
+.letter_footer-link-leaf {
+   position: absolute;
+   top: 0;
+   left: 0;
+   filter: blur(3px);
+}
+.letter_footer-link-text {
+   position: absolute;
+   bottom: 0;
+   left: 0;
+   font-family: 'Proxima Nova';
+   font-style: normal;
+   font-weight: 400;
+   font-size: 16px;
+   line-height: 21px;
+   padding-bottom: 45px;
+}
+.letter_img-sheet {
+   width: 56px;
+   height: 68px;
+   margin-left: 20px;
+}
+.letter_img-logo {
+   width: 274px;
+   height: 61px;
+}
+.letter_img-arrow {
+   width: 120px;
+   height: 132px;
+}
+.letter_img-sousage {
+   width: 130px;
+   height: 130px;
+   margin-right: 20px;
+   filter: blur(3px);
+}
+.no-blur {
+   filter: blur(0px);
+}
+.letter_img-chees {
+   width: 46px;
+   height: 71px;
+}
+.letter_footer-sausage {
+   position: absolute;
+   right: 10px;
+   bottom: 0;
+}
+.letter_padding-one {
+   height: 40px;
+}
+.letter_padding-too {
+   height: 30px;
+}
+.letter_padding-three {
+   height: 60px;
+}
+.letter_padding-four {
+   height: 140px;
+}
+.letter-link {
+   text-decoration: none;
+   color: #ffffff;
+   border-bottom: 1px solid #ffffff;
+}
+
+@media (max-width: 699px) {
+   .letter {
+       width: 320px;
+       height: 600px;
+       background-color: #1F2537;
+       text-align: center;
+   }
+   .letter_container {
+       width: 288px;
+   }
+   .letter_link {
+       width: 200px;
+       padding: 25px 0;
+       color: #ffffff;
+       font-weight: 400;
+       font-size: 10px;
+       line-height: 14px;
+   }
+   .letter_blok-text {
+       color: #ffffff;
+       font-family: 'Architects Daughter';
+       font-style: normal;
+       font-weight: 400;
+       font-size: 14px;
+       line-height: 20px;
+   }
+   .letter_blok-text-dark {
+       font-style: normal;
+       font-weight: 400;
+       font-size: 14px;
+       line-height: 20px;
+   }
+   .letter_text {
+       font-style: normal;
+       font-weight: 400;
+       font-size: 12px;
+       line-height: 16px;
+   }
+   .letter_red-link {
+       padding: 14px 0;
+       width: 188px;
+   }
+   .letter_red-link {
+       padding: 13px 28px;
+       font-weight: 400;
+       font-size: 12px;
+       line-height: 16px;
+   }
+   .letter_text-rice {
+       padding: 3px;
+   }
+   .letter_footer-link-text {
+       font-style: normal;
+       font-weight: 400;
+       font-size: 10px;
+       line-height: 14px;
+   }
+   .letter_chees {
+       margin-top: 10px;
+       padding-right: 15px;
+   }
+   .letter_pizza {
+       bottom: -4px;
+   }
+   .letter_footer-link {
+       bottom: -40px;
+       left: 135px;
+   }
+   .letter_footer-link-container {
+       position: relative;
+       width: 180px;
+       height: 170px;
+   }
+   .letter_footer-link-leaf {
+       top: 30px;
+       left: 0;
+   }
+   .letter_footer-sousage {
+       position: absolute;
+       right: 10px;
+       bottom: 40px;
+   }
+   .letter_padding-one {
+       height: 25px;
+   }
+   .letter_padding-too {
+       height: 12px;
+   }
+   .letter_padding-four {
+       height: 135px;
+   }
+   .letter_img-sheet {
+       width: 24px;
+       height: 31px;
+       margin-left: 20px;
+   }
+   .letter_img-logo {
+       width: 95px;
+       height: 17px;
+   }
+   .letter_img-arrow {
+       width: 60px;
+       height: 66px;
+   }
+   .letter_img-title {
+       width: 288px;
+       height: 55px;
+   }
+   .letter_img-sousage {
+       width: 45px;
+       height: 43px;
+       margin-right: 20px;
+   }
+   .letter_img-chees {
+       width: 22px;
+       height: 34px;
+   }
+   .letter_img-pizza {
+       width: 160px;
+       height: 190px;
+   }
+}

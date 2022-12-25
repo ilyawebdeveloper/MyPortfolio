@@ -1,0 +1,107 @@
+/* *{
+   
+   padding: 0;
+   font-family: sans-serif;
+   box-sizing: border-box;
+} */
+
+.containerShell{
+   height: 100vh;
+   width: 100vw;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+
+   background-color: #03a9f4;
+}
+
+.active{
+   background-color: #f43648;
+}
+
+.main{
+   background-color: rgba(255,255,255,0.2);
+   width: 800px;
+   height: 500px;
+   display: flex;
+   padding: 40px 0;
+   align-items: center;
+  position: relative;
+}
+
+.main_one{
+   width: 50%;
+   text-align: center;
+}
+
+.main_one-title{
+   font-size: 1.2rem;
+   color: white;
+}
+
+.main_one-button{
+   padding: 5px 10px;
+   border: none;
+   margin-top: 30px;
+}
+
+.form-box{
+   width: 50%;
+   height: 100%;
+   background-color: #fff;
+   position: absolute;
+   top:0;
+   left: 0;
+   z-index: 10000;
+
+   overflow: hidden;
+   transition: 0.5s ease-in-out;
+}
+
+.form-box.active{
+   left: 50%;
+}
+
+.form{
+   width: 100%;
+   padding: 20px 70px;
+   position: absolute;
+}
+
+.form_register{
+   left:100%;
+}
+
+.form-box.active .form_register{
+   left:0%;
+}
+
+.form-box.active .form_open{
+   left:-100%;
+}
+
+
+.form_title{
+   margin-top: 50px;
+   color: #333;
+   font-size: 1.5rem;
+}
+
+.form_entrance{
+   padding: 6px 40px;
+   color: #333;
+}
+
+.form_forgot{
+   text-decoration: none;
+   color: #333;
+}
+
+.form_login{
+   padding: 5px;
+}
+
+.form_pssword{
+   padding: 5px;
+}
+
