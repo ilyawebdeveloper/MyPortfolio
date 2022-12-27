@@ -7,6 +7,7 @@ import MonPrice from './componets/MonPrice/MonPrice';
 import Homepage from './componets/HomePage/Homepage';
 import Cascad from './componets/Promcascad/Cascad';
 import Letter from './componets/Letter/Letter';
+import { Market } from './componets/Market/Market';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -18,6 +19,8 @@ root.render(
         <Route path="/MyForm" element={<MyForm /> } />
         <Route path="/Cascad" element={<Cascad /> } />
         <Route path="/Letter" element={<Letter /> } />
+        <Route path="/Market" element={<Market /> } />
+        {/* <Route path="/Market/product/:id" element={<Product /> } /> */}
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

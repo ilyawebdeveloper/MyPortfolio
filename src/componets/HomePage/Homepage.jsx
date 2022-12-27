@@ -14,6 +14,7 @@ import iconStyled from "../../img/styledComponets.png"
 import iconCss from "../../img/css3.svg"
 import iconJs from "../../img/js2.png"
 import iconsFormik from "../../img/Formik_1.svg"
+import market from "../../img/market.png"
 import { useState } from 'react'
 import { Modal } from '../Modal/Modal'
 
@@ -21,7 +22,7 @@ export default function Homepage() {
   const [showModal, setShowModal] = useState(true);
   const [text, setText] = useState("i")
   const clickTabMy = () => {
-    setText("Всем привет, меня зовут Илья, я начинающий фронтенд-разработчик. Я увлекаюсь спортом, природой, очень люблю путешествовать.Я неоднакротно ходил в походы, в том числе и на Байкал.Проживаю в городе Ижевск, паралельно с работой я учусб в государственном Ижексвом Университете")
+    setText("Всем привет, меня зовут Илья, я начинающий фронтенд-разработчик. Я увлекаюсь спортом, природой, очень люблю путешествовать.Я неоднакротно ходил в походы, в том числе и на Байкал.Проживаю в городе Ижевск, паралельно с работой я учусь в государственном Ижексвом Университете")
     setShowModal(false);
   }
   const clickTabEx = () => {
@@ -103,28 +104,39 @@ export default function Homepage() {
           <Modal text={text} />
         </div>
         <Cart
+          backgroundColor="#A7414A"
           title="Mon Price" 
           text="Лендинг, созданный для записи на маникюр, создавался в качестве обучения html && css"
           image={monPricePhoto}
           link="/MonPrice"
         />
         <Cart
+          backgroundColor="#A7414A"
           title="My Form"
           text="Форма валидации сделаная для обучения, в проекте использовался такой стек технологий: html && css && js"
           image={formPhoto}
           link="/MyForm"
         />
         <Cart
+          backgroundColor="#A7414A"
           title="Promcascad"
           text="Лендинг созданный для строительной компании, в проекте использовался такой стек технологий: html && css"
           image={promcascadPhoto}
           link="/Cascad"
         />
         <Cart
+          backgroundColor="#A7414A"
           title="Letter Dominos"
           text="В компании galament softwere я занимался версткой писем для тригерной рассылки, это письмо сейчас приходит покупателям dominospizza"
           image={letterPhoto}
           link="/Letter"
+        />
+         <Cart
+          backgroundColor="#A7414A"
+          title="Smoll Market"
+          text="Небольшой магазин техники, где на главной страницы изображены карточки товаров с данными с сервера, в проекте использовался такой стек технологий: React && axios && scss"
+          image={market}
+          link="/Market"
         />
       </div>
     </div>

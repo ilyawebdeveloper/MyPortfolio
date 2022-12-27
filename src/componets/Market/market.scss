@@ -1,0 +1,28 @@
+.market{
+   width: 100%;
+   height: 100%;
+   display: flex;
+   flex-wrap: wrap;
+   background-color: #3914AF;
+
+   .market__cart{
+      margin: 20px;
+      border-radius: 20px;
+      background-color: #876ED7;
+   }
+   .market__info{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .market__info-price{
+         font-size: 22px;
+         color: #ffffff;
+      }
+      .market__info-raiting{
+         margin-left: 20px;
+         font-size: 18px;
+         color: #ffffff;
+      }
+   }
+}
