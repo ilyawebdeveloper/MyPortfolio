@@ -16,3 +16,8 @@
    margin-left: 7px;
    margin-right: 7px;
 }
+@media (max-width: 440px) {
+   .modal {
+      width: 300px;
+   }
+}

@@ -17,6 +17,12 @@ import iconsFormik from '../../img/Formik_1.svg'
 import market from '../../img/market.png'
 import { useState } from 'react'
 import { Modal } from '../Modal/Modal'
+import {
+	RiBriefcase2Line,
+	RiEmpathizeFill,
+	RiUserStarLine,
+	RiStarSmileFill,
+} from 'react-icons/ri'
 
 export default function Homepage() {
 	const [showModal, setShowModal] = useState(true)
@@ -106,7 +112,9 @@ export default function Homepage() {
 	}
 
 	const clickTabPurpose = () => {
-		setText('Мой опыт работы 8 месяцев')
+		setText(
+			'Мои цели на ближайшие 3 года, это вырасти как специалист и создать продукт который нравиться пользователям и мне. Попробовать разные технологии и возможно помочь начинающим специалистам вырости'
+		)
 		setShowModal(false)
 	}
 	const clickModal = () => {
@@ -125,59 +133,84 @@ export default function Homepage() {
 					Ilya. 18 y.o <br /> Frontend-developer
 				</div>
 				<div className='home_wrapper-skills'>
-					<img
-						className='home_navbar-img-skills'
-						src={iconScss}
-						alt='mySkillsScss'
-					/>
-					<img
-						className='home_navbar-img-skills'
-						src={iconReact}
-						alt='mySkillsScss'
-					/>
-					<img
-						className='home_navbar-img-skills'
-						src={iconRedux}
-						alt='mySkillsScss'
-					/>
-					<img
-						className='home_navbar-img-skills'
-						src={iconTailwind}
-						alt='mySkillsScss'
-					/>
-					<img
-						className='home_navbar-img-skills'
-						src={iconStyled}
-						alt='mySkillsScss'
-					/>
-					<img
-						className='home_navbar-img-skills'
-						src={iconCss}
-						alt='mySkillsScss'
-					/>
-					<img
-						className='home_navbar-img-skills'
-						src={iconJs}
-						alt='mySkillsScss'
-					/>
-					<img
-						className='home_navbar-img-skills'
-						src={iconsFormik}
-						alt='mySkillsScss'
-					/>
+					<a href='https://sass-lang.com/' target='blank' className='home_navbar-img-link'>
+						<img
+							className='home_navbar-img-skills'
+							src={iconScss}
+							alt='mySkillsScss'
+						/>
+					</a>
+					<a href='https://reactjs.org/' target='blank' className='home_navbar-img-link'>
+						<img
+							className='home_navbar-img-skills'
+							src={iconReact}
+							alt='mySkillsScss'
+						/>
+					</a>
+					<a href='https://redux.js.org/' target='blank' className='home_navbar-img-link'>
+						<img
+							className='home_navbar-img-skills'
+							src={iconRedux}
+							alt='mySkillsScss'
+						/>
+					</a>
+					<a href='https://tailwindcss.com/' target='blank' className='home_navbar-img-link'>
+						<img
+							className='home_navbar-img-skills'
+							src={iconTailwind}
+							alt='mySkillsScss'
+						/>
+					</a>
+					<a href='https://styled-components.com/' target='blank' className='home_navbar-img-link'>
+						<img
+							className='home_navbar-img-skills'
+							src={iconStyled}
+							alt='mySkillsScss'
+						/>
+					</a>
+					<a
+						href='https://developer.mozilla.org/en-US/docs/Web/CSS'
+						target='blank' className='home_navbar-img-link'>
+						<img
+							className='home_navbar-img-skills'
+							src={iconCss}
+							alt='mySkillsScss'
+						/>
+					</a>
+					<a
+						href='https://developer.mozilla.org/en-US/docs/Web/JavaScript'
+						target='blank'
+            className='home_navbar-img-link'>
+						<img
+							className='home_navbar-img-skills'
+							src={iconJs}
+							alt='mySkillsScss'
+						/>
+					</a>
+					<a href='https://formik.org/' target='blank' className='home_navbar-img-link'>
+						<img
+							className='home_navbar-img-skills'
+							src={iconsFormik}
+							alt='mySkillsScss'
+						/>
+					</a>
 				</div>
 				<div className='home_navbar-wrapper-tab'>
 					<div className='home_navbar-tab' onClick={clickTabMy}>
-						Обо мне
+						<RiEmpathizeFill />
+						<div className='home_navbar-tab-text'>Obo мне</div>
 					</div>
 					<div className='home_navbar-tab' onClick={clickTabEx}>
-						Опыт работы
+						<RiBriefcase2Line />
+						<div className='home_navbar-tab-text'>Опыт работы</div>
 					</div>
 					<div className='home_navbar-tab' onClick={clickTabSkill}>
-						Скилы
+						<RiUserStarLine />
+						<div className='home_navbar-tab-text'>Скилы</div>
 					</div>
 					<div className='home_navbar-tab' onClick={clickTabPurpose}>
-						Цели
+						<RiStarSmileFill />
+						<div className='home_navbar-tab-text'>Цели</div>
 					</div>
 				</div>
 			</div>
@@ -216,7 +249,7 @@ export default function Homepage() {
 				<Cart
 					backgroundColor='#A7414A'
 					title='Smoll Market'
-					text='Небольшой магазин техники, где на главной страницы изображены карточки товаров с данными с сервера, в проекте использовался такой стек технологий: React && axios && scss'
+					text='Небольшой магазин техники, где на главной страницы изображены карточки товаров с данными из сервера, в проекте использовался такой стек технологий: React && axios && scss'
 					image={market}
 					link='/Market'
 				/>
