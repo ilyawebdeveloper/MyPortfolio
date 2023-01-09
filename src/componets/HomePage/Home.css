@@ -1,5 +1,5 @@
 .home{
-   background-color: #282726;
+   background: url('../../img/Sea.png');
    width: 100%;
    height: fit-content;
    display: grid;
@@ -68,9 +68,9 @@
 }
 .home_modal{
    width: 75%;
-   height: 100%;
+   height: 115%;
    position: absolute;
-   background-color: #282726;
+   background: url('../../img/Clouds-66.7s-1536px.png');
    text-align: center;
 }
 .home_cart{
@@ -79,7 +79,6 @@
    justify-content: center;
    flex-wrap: wrap;
 }
-
 
 .home_cart-skills {
    margin-top: 10px;
