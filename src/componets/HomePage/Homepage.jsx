@@ -116,7 +116,9 @@ export default function Homepage() {
 	return (
 		<div className='home'>
 			<div className='home_navbar'>
-				<a href='https://github.com/ilyawebdeveloper/MyPortfolio'>
+				<a
+					href='https://github.com/ilyawebdeveloper/MyPortfolio'
+					target='https://github.com/ilyawebdeveloper/MyPortfolio'>
 					<img className='home_navbar-img' src={myPhoto} alt='myPhoto' />
 				</a>
 				<div className='home_navbar-title'>
