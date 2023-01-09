@@ -146,4 +146,7 @@
       height: 100px;
       font-size: 14px;
    }
+   .home_navbar-title {
+      margin-left: 0;
+   }
 }
