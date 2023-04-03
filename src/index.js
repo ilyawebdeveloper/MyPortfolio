@@ -20,7 +20,6 @@ root.render(
         <Route path="/Cascad" element={<Cascad /> } />
         <Route path="/Letter" element={<Letter /> } />
         <Route path="/Market" element={<Market /> } />
-        {/* <Route path="/Market/product/:id" element={<Product /> } /> */}
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

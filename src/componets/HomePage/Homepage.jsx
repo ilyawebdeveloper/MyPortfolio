@@ -1,259 +1,145 @@
 import React from 'react'
-import Cart from '../Cart/Cart'
 import './Home.css'
-import monPricePhoto from '../../img/MonpricePhoto.png'
-import formPhoto from '../../img/Снимок экрана 2022-12-24 165924.png'
+import icon from '../../img/prewie.png'
+import iconForMy from '../../img/iconForMy.png'
 import promcascadPhoto from '../../img/Promcascad.png'
-import letterPhoto from '../../img/Letter.png'
-import myPhoto from '../../img/MyPhoto.png'
-import iconScss from '../../img/scss.png'
-import iconReact from '../../img/React-icon.svg.png'
-import iconRedux from '../../img/reduxIcon.svg'
-import iconTailwind from '../../img/Tailwind_CSS_Logo.svg.png'
-import iconStyled from '../../img/styledComponets.png'
-import iconCss from '../../img/css3.svg'
-import iconJs from '../../img/js2.png'
-import iconsFormik from '../../img/Formik_1.svg'
+import Cart from '../Cart/Cart'
+import formPhoto from '../../img/Снимок экрана 2022-12-24 165924.png'
+import monPricePhoto from '../../img/MonpricePhoto.png'
 import market from '../../img/market.png'
-import { useState } from 'react'
-import { Modal } from '../Modal/Modal'
-import {
-	RiBriefcase2Line,
-	RiEmpathizeFill,
-	RiUserStarLine,
-	RiStarSmileFill,
-} from 'react-icons/ri'
+import TowerModel from './TowerModel'
+import BigCityModal from './BigCityModel'
+import OneTowerModel from './OneTowerModel'
 
-export default function Homepage() {
-	const [showModal, setShowModal] = useState(true)
-	const [text, setText] = useState('i')
-	const clickTabMy = () => {
-		setText(
-			'Всем привет, меня зовут Илья, я начинающий фронтенд-разработчик. Я увлекаюсь спортом, природой, очень люблю путешествовать.Я неоднакротно ходил в походы, в том числе и на Байкал.Проживаю в городе Ижевск, паралельно с работой я учусь в государственном Ижексвом Университете'
-		)
-		setShowModal(false)
-	}
-	const clickTabEx = () => {
-		setText(
-			'Мой опыт работы 1 год, в компании под названием galament softwere. В компании я занимаюсь разработкой приложения на реакт,поддержкой уже готового сайта dominospizza.lt На данном проекте я созавал новый функционал, как пример кнопку прикрепить несколько файлов, а так же делал валидацию этих файлов. Так же одним из тасков было создание письма для тригерной рассылки. В ходе работы я использовал React,scss,js,redux а так же работал с библиотеками.'
-		)
-		setShowModal(false)
-	}
-	const clickTabSkill = () => {
-		setText(
-			<div className='home_cart'>
-				<div className='home_cart-skills'>
-					<img
-						className='home_cart-img-skills'
-						src={iconScss}
-						alt='mySkillsScss'
-					/>
-					<p className='home_cart-skills-name'>scss</p>
-				</div>
-				<div className='home_cart-skills'>
-					<img
-						className='home_cart-img-skills'
-						src={iconReact}
-						alt='mySkillsScss'
-					/>
-					<p className='home_cart-skills-name'>React</p>
-				</div>
-				<div className='home_cart-skills'>
-					<img
-						className='home_cart-img-skills'
-						src={iconRedux}
-						alt='mySkillsScss'
-					/>
-					<p className='home_cart-skills-name'>Redux</p>
-				</div>
-				<div className='home_cart-skills'>
-					<img
-						className='home_cart-img-skills'
-						src={iconTailwind}
-						alt='mySkillsScss'
-					/>
-					<p className='home_cart-skills-name'>Tailwind</p>
-				</div>
-				<div className='home_cart-skills'>
-					<img
-						className='home_cart-img-skills'
-						src={iconStyled}
-						alt='mySkillsScss'
-					/>
-					<p className='home_cart-skills-name'>Styled Component</p>
-				</div>
-				<div className='home_cart-skills'>
-					<img
-						className='home_cart-img-skills'
-						src={iconCss}
-						alt='mySkillsScss'
-					/>
-					<p className='home_cart-skills-name'>Css3</p>
-				</div>
-				<div className='home_cart-skills'>
-					<img
-						className='home_cart-img-skills'
-						src={iconJs}
-						alt='mySkillsScss'
-					/>
-					<p className='home_cart-skills-name'>JavaScript</p>
-				</div>
-				<div className='home_cart-skills'>
-					<img
-						className='home_cart-img-skills'
-						src={iconsFormik}
-						alt='mySkillsScss'
-					/>
-					<p className='home_cart-skills-name'>Formik Js</p>
-				</div>
-			</div>
-		)
-		setShowModal(false)
-	}
-
-	const clickTabPurpose = () => {
-		setText(
-			'Мои цели на ближайшие 3 года, это вырасти как специалист и создать продукт который нравиться пользователям и мне. Попробовать разные технологии и возможно помочь начинающим специалистам вырости'
-		)
-		setShowModal(false)
-	}
-	const clickModal = () => {
-		setShowModal(true)
-	}
-
+function Homepage() {
 	return (
 		<div className='home'>
-			<div className='home_navbar'>
-				<a
-					href='https://github.com/ilyawebdeveloper/MyPortfolio'
-					target='https://github.com/ilyawebdeveloper/MyPortfolio'>
-					<img className='home_navbar-img' src={myPhoto} alt='myPhoto' />
-				</a>
-				<div className='home_navbar-title'>
-					Ilya. 18 y.o <br /> Frontend-developer
-				</div>
-				<div className='home_wrapper-skills'>
-					<a href='https://sass-lang.com/' target='blank' className='home_navbar-img-link'>
-						<img
-							className='home_navbar-img-skills'
-							src={iconScss}
-							alt='mySkillsScss'
-						/>
-					</a>
-					<a href='https://reactjs.org/' target='blank' className='home_navbar-img-link'>
-						<img
-							className='home_navbar-img-skills'
-							src={iconReact}
-							alt='mySkillsScss'
-						/>
-					</a>
-					<a href='https://redux.js.org/' target='blank' className='home_navbar-img-link'>
-						<img
-							className='home_navbar-img-skills'
-							src={iconRedux}
-							alt='mySkillsScss'
-						/>
-					</a>
-					<a href='https://tailwindcss.com/' target='blank' className='home_navbar-img-link'>
-						<img
-							className='home_navbar-img-skills'
-							src={iconTailwind}
-							alt='mySkillsScss'
-						/>
-					</a>
-					<a href='https://styled-components.com/' target='blank' className='home_navbar-img-link'>
-						<img
-							className='home_navbar-img-skills'
-							src={iconStyled}
-							alt='mySkillsScss'
-						/>
-					</a>
-					<a
-						href='https://developer.mozilla.org/en-US/docs/Web/CSS'
-						target='blank' className='home_navbar-img-link'>
-						<img
-							className='home_navbar-img-skills'
-							src={iconCss}
-							alt='mySkillsScss'
-						/>
-					</a>
-					<a
-						href='https://developer.mozilla.org/en-US/docs/Web/JavaScript'
-						target='blank'
-            className='home_navbar-img-link'>
-						<img
-							className='home_navbar-img-skills'
-							src={iconJs}
-							alt='mySkillsScss'
-						/>
-					</a>
-					<a href='https://formik.org/' target='blank' className='home_navbar-img-link'>
-						<img
-							className='home_navbar-img-skills'
-							src={iconsFormik}
-							alt='mySkillsScss'
-						/>
-					</a>
-				</div>
-				<div className='home_navbar-wrapper-tab'>
-					<div className='home_navbar-tab' onClick={clickTabMy}>
-						<RiEmpathizeFill />
-						<div className='home_navbar-tab-text'>Obo мне</div>
-					</div>
-					<div className='home_navbar-tab' onClick={clickTabEx}>
-						<RiBriefcase2Line />
-						<div className='home_navbar-tab-text'>Опыт работы</div>
-					</div>
-					<div className='home_navbar-tab' onClick={clickTabSkill}>
-						<RiUserStarLine />
-						<div className='home_navbar-tab-text'>Скилы</div>
-					</div>
-					<div className='home_navbar-tab' onClick={clickTabPurpose}>
-						<RiStarSmileFill />
-						<div className='home_navbar-tab-text'>Цели</div>
-					</div>
-				</div>
-			</div>
 			<div className='home_container'>
-				<div className='home_modal' onClick={clickModal} hidden={showModal}>
-					<Modal text={text} />
+				<div className='nome_info-wrapper'>
+					<div className='nome_info-icon'>
+						<img src={icon} alt='#' />
+					</div>
+					<div className='nome_info-text'>
+						<div className='nome_info-title'>
+							Frontend- <br />
+							разработка ваших <br /> проектов
+						</div>
+						<button className='nome_info-button'>
+							<div className='nome_info-button-text'>Портфолио</div>
+						</button>
+						<button className='nome_info-button nome_info-button-right'>
+							<div className='nome_info-button-text'>Резюме</div>
+						</button>
+					</div>
 				</div>
-				<Cart
-					backgroundColor='#A7414A'
-					title='Mon Price'
-					text='Лендинг, созданный для записи на маникюр, создавался в качестве обучения html && css'
-					image={monPricePhoto}
-					link='/MonPrice'
-				/>
-				<Cart
-					backgroundColor='#A7414A'
-					title='My Form'
-					text='Форма валидации сделаная для обучения, в проекте использовался такой стек технологий: html && css && js'
-					image={formPhoto}
-					link='/MyForm'
-				/>
-				<Cart
-					backgroundColor='#A7414A'
-					title='Promcascad'
-					text='Лендинг созданный для строительной компании, в проекте использовался такой стек технологий: html && css'
-					image={promcascadPhoto}
-					link='/Cascad'
-				/>
-				<Cart
-					backgroundColor='#A7414A'
-					title='Letter Dominos'
-					text='В компании galament softwere я занимался версткой писем для тригерной рассылки, это письмо сейчас приходит покупателям dominospizza'
-					image={letterPhoto}
-					link='/Letter'
-				/>
-				<Cart
-					backgroundColor='#A7414A'
-					title='Smoll Market'
-					text='Небольшой магазин техники, где на главной страницы изображены карточки товаров с данными из сервера, в проекте использовался такой стек технологий: React && axios && scss'
-					image={market}
-					link='/Market'
-				/>
+
+				<p className='home_forMy-title'> Обо мне </p>
+				<div className='home_forMy'>
+					<div className='home_forMy-text'>
+						<p style={{ marginBottom: '30px' }}>
+							Привет, меня зовут Илья я Frontend-разработчик, занимаюсь
+							созданием веб- приложений.
+						</p>
+						<p style={{ marginBottom: '30px' }}>
+							Очень люблю путешествовать и узнавать новое, всегда рад новой
+							компании.
+						</p>
+						<p>
+							Для меня важно создавать что то новое и полезное, сейчас я работаю
+							в компании Galament Software,занимаюсь разработкой крутых и
+							многофункциональных сайтов
+						</p>
+					</div>
+					<div className='home_forMy-icon'>
+						<img src={iconForMy} alt='#' />
+					</div>
+				</div>
+
+				<p className='home_forMy-title'> Мои проекты </p>
+				<div className='home_works'>
+					<Cart
+						title='01 MY FORM'
+						text='Форма валидации сделаная для обучения, в проекте использовался такой стек технологий: html && css && js'
+						image={formPhoto}
+						link='/MyForm'
+					/>
+					<Cart
+						title='02 MON PRICE'
+						text='Лендинг, созданный для записи на маникюр, создавался в качестве обучения html && css'
+						image={monPricePhoto}
+						link='/MonPrice'
+					/>
+					<Cart
+						title='03 PROMCASCAD'
+						text='Лендинг созданный для строительной компании, в проекте использовался такой стек технологий: html && css'
+						image={promcascadPhoto}
+						link='/Cascad'
+					/>
+					<Cart
+						title='04 SMOLL MARKET'
+						text='Небольшой магазин техники, в проекте использовался такой стек технологий: React && axios && scss'
+						image={market}
+						link='/Market'
+					/>
+				</div>
+
+				<p className='home_forMy-title'> Опыт работы </p>
+				<div className='home_experience-wrapper'>
+					<div className='home_experience'>
+						<div className='home_experience-tab'>
+							<div className='home_experience-tab-text'> GALAMENT </div>
+						</div>
+						<div className='home_experience-tab'>
+							<div className='home_experience-tab-text'> WORKSPACER </div>
+						</div>
+						<div className='home_experience-tab'>
+							<div className='home_experience-tab-text'> DOMINOS'PIZZA </div>
+						</div>
+					</div>
+					<div className='home_experience-text'>
+						<p style={{ marginBottom: '10px' }}>Engineer @ Upstatement</p>{' '}
+						<p style={{ marginBottom: '15px' }}>May 2018 - Present</p>
+						<p style={{ marginBottom: '10px' }}>
+							* Write modern, performant, maintainable code for a diverse array
+							of client and internal projects
+						</p>
+						<p style={{ marginBottom: '10px' }}>
+							* Work with a variety of different languages, platforms,
+							frameworks, and content management systems such as JavaScript,
+							TypeScript, Gatsby, React, Craft, WordPress, Prismic, and Netlify
+						</p>
+						<p>
+							* Communicate with multi-disciplinary teams of engineers,
+							designers, producers, and clients on a daily basis
+						</p>
+					</div>
+				</div>
+				<div className='wrapper_models'>
+					<div className='big-tower'>
+						<TowerModel />
+					</div>
+					<div className='flying-city'>
+						<BigCityModal />
+					</div>
+					<div className='small-tower'>
+						<OneTowerModel />
+					</div>
+				</div>
+				<div className='home_footer'>
+					<div className='home_nav'>
+						<p style={{ marginBottom: '15px' }}>Обо мне</p>
+						<p style={{ marginBottom: '15px' }}>Мои работы</p>
+						<p>Опыт работы</p>
+					</div>
+					<div className='home_contact'>
+						<p style={{ marginBottom: '15px' }}>GitHub</p>
+						<p style={{ marginBottom: '15px' }}>Telegram</p>
+						<p>Vkontakte</p>
+					</div>
+				</div>
 			</div>
 		</div>
 	)
 }
+
+export default Homepage

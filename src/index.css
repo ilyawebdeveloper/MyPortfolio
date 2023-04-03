@@ -1,4 +1,4 @@
-body {
+* {
   margin: 0;
   box-sizing: border-box;
 }
@@ -6,4 +6,5 @@ body {
 a{
   border: none;
   text-decoration: none;
+  color: white;
 }
