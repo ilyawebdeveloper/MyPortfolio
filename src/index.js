@@ -8,6 +8,7 @@ import Homepage from './componets/HomePage/Homepage';
 import Cascad from './componets/Promcascad/Cascad';
 import Letter from './componets/Letter/Letter';
 import { Market } from './componets/Market/Market';
+import World from './componets/MyCity/World';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -20,6 +21,7 @@ root.render(
         <Route path="/Cascad" element={<Cascad /> } />
         <Route path="/Letter" element={<Letter /> } />
         <Route path="/Market" element={<Market /> } />
+        <Route path='/World' element={<World/>} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

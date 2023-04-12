@@ -34,6 +34,7 @@
    font-weight: 400;
    font-size: 50px;
    line-height: 70px;
+   max-width: 450px;
 }
 
 .nome_info-button{
@@ -108,48 +109,25 @@
    justify-content: center;
    border-left: 6px solid #2E2C2C;
    transition: all 0.7s ease-in;
+   cursor: pointer;
 }
 
 .home_experience-tab:hover{
-   border-left: 6px solid #B16932;
+   border-left: 3px solid #B16932;
 }
 
 .home_experience-wrapper{
    display: flex;
    margin-top: 125px;
 }
-.chudik{
-   width: 200px;
-   height: 200px;
-}
-.big-tower{
-   width: 300px;
-   height: 660px;
-}
-.small-tower{
-   width: 200px;
-   height: 565px;
-}
-.kaktus{
-   width: 100px;
-   height: 592px;
-}
-.flying-city{
-   width: 669px;
-   height: 655px;
-}
-.volcano{
-   height: 540px;
-   width: 300px;
+.world-link {
+   width: fit-content;
+   margin: 20px auto;
+   text-transform: uppercase;
 }
 .container_model{
    display: flex;
    flex-direction: column;
-}
-.wrapper_models{
-   display: flex;
-   flex-wrap: wrap;
-   align-items: end;
 }
 
 .home_footer{
@@ -176,4 +154,10 @@
    font-size: 24px;
    line-height: 29px;
    color: #FEFAFA;
+}
+
+.margin-top{
+   margin-top: 15px;
+   display: block;
+   cursor: pointer;
 }

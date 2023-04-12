@@ -1,17 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Home.css'
 import icon from '../../img/prewie.png'
 import iconForMy from '../../img/iconForMy.png'
-import promcascadPhoto from '../../img/Promcascad.png'
 import Cart from '../Cart/Cart'
-import formPhoto from '../../img/Снимок экрана 2022-12-24 165924.png'
-import monPricePhoto from '../../img/MonpricePhoto.png'
-import market from '../../img/market.png'
-import TowerModel from './TowerModel'
-import BigCityModal from './BigCityModel'
-import OneTowerModel from './OneTowerModel'
+import { Link } from 'react-router-dom'
+import { data } from '../Data/Data'
+import { FcReddit } from 'react-icons/fc'
 
 function Homepage() {
+	const {experience, block_main, block_about_me, projects} = data;
+	const [index, setIndex] = useState(0);
 	return (
 		<div className='home'>
 			<div className='home_container'>
@@ -20,121 +18,104 @@ function Homepage() {
 						<img src={icon} alt='#' />
 					</div>
 					<div className='nome_info-text'>
-						<div className='nome_info-title'>
-							Frontend- <br />
-							разработка ваших <br /> проектов
-						</div>
+						<div className='nome_info-title'>{block_main.text.title}</div>
 						<button className='nome_info-button'>
-							<div className='nome_info-button-text'>Портфолио</div>
+							<div className='nome_info-button-text'>
+								<a href="#projects">{data.block_main.text.portfolio}</a>
+							</div>
 						</button>
 						<button className='nome_info-button nome_info-button-right'>
-							<div className='nome_info-button-text'>Резюме</div>
+							<div className='nome_info-button-text'>
+								{data.block_main.text.cv}
+							</div>
 						</button>
 					</div>
 				</div>
 
-				<p className='home_forMy-title'> Обо мне </p>
+				<p className='home_forMy-title' id='about'>
+					{block_about_me.text.title}
+				</p>
 				<div className='home_forMy'>
 					<div className='home_forMy-text'>
-						<p style={{ marginBottom: '30px' }}>
-							Привет, меня зовут Илья я Frontend-разработчик, занимаюсь
-							созданием веб- приложений.
-						</p>
-						<p style={{ marginBottom: '30px' }}>
-							Очень люблю путешествовать и узнавать новое, всегда рад новой
-							компании.
-						</p>
-						<p>
-							Для меня важно создавать что то новое и полезное, сейчас я работаю
-							в компании Galament Software,занимаюсь разработкой крутых и
-							многофункциональных сайтов
-						</p>
+						{data.block_about_me.text.info.map((item, index) => (
+							<p key={index} style={{ marginBottom: '30px' }}>
+								{item}
+							</p>
+						))}
 					</div>
 					<div className='home_forMy-icon'>
 						<img src={iconForMy} alt='#' />
 					</div>
 				</div>
 
-				<p className='home_forMy-title'> Мои проекты </p>
+				<p className='home_forMy-title' id='projects'>
+					{projects.text.title}
+				</p>
 				<div className='home_works'>
-					<Cart
-						title='01 MY FORM'
-						text='Форма валидации сделаная для обучения, в проекте использовался такой стек технологий: html && css && js'
-						image={formPhoto}
-						link='/MyForm'
-					/>
-					<Cart
-						title='02 MON PRICE'
-						text='Лендинг, созданный для записи на маникюр, создавался в качестве обучения html && css'
-						image={monPricePhoto}
-						link='/MonPrice'
-					/>
-					<Cart
-						title='03 PROMCASCAD'
-						text='Лендинг созданный для строительной компании, в проекте использовался такой стек технологий: html && css'
-						image={promcascadPhoto}
-						link='/Cascad'
-					/>
-					<Cart
-						title='04 SMOLL MARKET'
-						text='Небольшой магазин техники, в проекте использовался такой стек технологий: React && axios && scss'
-						image={market}
-						link='/Market'
-					/>
+					{projects.cart_info.map((cart) => (
+						<Cart
+							key={cart.link}
+							title={cart.title}
+							text={cart.text}
+							image={cart.photo}
+							link={cart.link}
+						/>
+					))}
 				</div>
-
-				<p className='home_forMy-title'> Опыт работы </p>
+				<p className='home_forMy-title' id='experience'>
+					{' '}
+					{experience.title}{' '}
+				</p>
 				<div className='home_experience-wrapper'>
 					<div className='home_experience'>
-						<div className='home_experience-tab'>
-							<div className='home_experience-tab-text'> GALAMENT </div>
-						</div>
-						<div className='home_experience-tab'>
-							<div className='home_experience-tab-text'> WORKSPACER </div>
-						</div>
-						<div className='home_experience-tab'>
-							<div className='home_experience-tab-text'> DOMINOS'PIZZA </div>
-						</div>
+						{data.experience.left_side.map((item, index) => (
+							<div className='home_experience-tab' key={index}>
+								<div
+									className='home_experience-tab-text'
+									onClick={() => setIndex(index)}>
+									{item}
+								</div>
+							</div>
+						))}
 					</div>
 					<div className='home_experience-text'>
-						<p style={{ marginBottom: '10px' }}>Engineer @ Upstatement</p>{' '}
-						<p style={{ marginBottom: '15px' }}>May 2018 - Present</p>
 						<p style={{ marginBottom: '10px' }}>
-							* Write modern, performant, maintainable code for a diverse array
-							of client and internal projects
+							{experience.right_side[index].title}
+						</p>
+						<p style={{ marginBottom: '15px' }}>
+							{experience.right_side[index].subtitle}
 						</p>
 						<p style={{ marginBottom: '10px' }}>
-							* Work with a variety of different languages, platforms,
-							frameworks, and content management systems such as JavaScript,
-							TypeScript, Gatsby, React, Craft, WordPress, Prismic, and Netlify
+							{experience.right_side[index].first_paragraph}
 						</p>
-						<p>
-							* Communicate with multi-disciplinary teams of engineers,
-							designers, producers, and clients on a daily basis
+						<p style={{ marginBottom: '10px' }}>
+							{experience.right_side[index].second_paragraph}
 						</p>
+						<p>{experience.right_side[index].third_paragraph}</p>
 					</div>
 				</div>
-				<div className='wrapper_models'>
-					<div className='big-tower'>
-						<TowerModel />
-					</div>
-					<div className='flying-city'>
-						<BigCityModal />
-					</div>
-					<div className='small-tower'>
-						<OneTowerModel />
-					</div>
+				<div className='world-link'>
+					<Link to={'/World'} className='link'>
+						Открыть мой мир
+						<FcReddit />
+					</Link>
 				</div>
 				<div className='home_footer'>
 					<div className='home_nav'>
-						<p style={{ marginBottom: '15px' }}>Обо мне</p>
-						<p style={{ marginBottom: '15px' }}>Мои работы</p>
-						<p>Опыт работы</p>
+						<a href='#about'>{block_about_me.text.title}</a>
+						<a href='#projects' className='margin-top'>
+							{projects.text.title}
+						</a>
+						<a href='#experience' className='margin-top'>
+							{experience.title}
+						</a>
 					</div>
 					<div className='home_contact'>
-						<p style={{ marginBottom: '15px' }}>GitHub</p>
-						<p style={{ marginBottom: '15px' }}>Telegram</p>
-						<p>Vkontakte</p>
+						<a href='https://github.com/ilyawebdeveloper'>GitHub</a>
+						<a href='https://t.me/ryzhiy17' className='margin-top'>
+							Telegram
+						</a>
+						<p className='margin-top'>Vkontakte</p>
 					</div>
 				</div>
 			</div>

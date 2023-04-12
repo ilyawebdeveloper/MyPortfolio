@@ -1,0 +1,59 @@
+.wrapper_models{
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #1E1E1E;
+  position: relative;
+  overflow: hidden;
+}
+
+.chudik{
+  width: 360px;
+  height: 400px;
+  position: absolute;
+  left: 300px;
+  top: -70px;
+}
+
+.big-tower{
+  width: 435px;
+  height: 1010px;
+  position: absolute;
+  left: 0;
+  bottom: -215px;
+}
+.small-tower{
+  width: 300px;
+  height: 901px;
+  position: absolute;
+  left: 380px;
+  bottom: -220px;
+}
+.kaktus{
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  bottom: -50px;
+  left: 510px;
+}
+.kaktus-too{
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  bottom: -50px;
+  left: 590px;
+}
+.flying-city{
+  width: 669px;
+  height: 537px;
+  position: absolute;
+  top: -111px;
+  right: -95px;
+}
+.vulcano{
+  position: absolute;
+  height: 919px;
+  width: 724px;
+  right: -200px;
+  bottom: -260px;
+}

@@ -13,8 +13,8 @@ export default function ChudikModel() {
 				<Chudik />
 			</Stage>
 			<OrbitControls
-				// autoRotate
-				// autoRotateSpeed={1}
+				autoRotate
+				autoRotateSpeed={1.5}
 				enableZoom={false}
 				enableRotate={true}
 			/>

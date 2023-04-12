@@ -13,8 +13,8 @@ export default function TowerModel() {
 				<Tower />
 			</Stage>
 			<OrbitControls
-				// autoRotate
-				// autoRotateSpeed={1}
+				autoRotate
+				autoRotateSpeed={0.7}
 				enableZoom={false}
 				enableRotate={true}
 			/>

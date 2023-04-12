@@ -13,8 +13,8 @@ export default function OneTowerModel() {
 				<OneTower />
 			</Stage>
 			<OrbitControls
-				// autoRotate
-				// autoRotateSpeed={1}
+				autoRotate
+				autoRotateSpeed={1}
 				enableZoom={false}
 				enableRotate={true}
 			/>
