@@ -6,11 +6,12 @@ import KaktusModel from '../HomePage/modelsWrapper/KaktusModel'
 import VolcanoModel from '../HomePage/modelsWrapper/VolcanoModel'
 // import ChudikModel from '../HomePage/modelsWrapper/Chudik'
 import derevnya from '../../img/derevnya.jpg'
+import Loader from '../Loader/Loader'
 import './world.scss'
 
 function World() {
 	return (
-		<Suspense fallback={'loading...'}>
+		<Suspense fallback={<Loader />}>
 			<div className='wrapper_models'>
 				<img className='wrapper_models__image' src={derevnya} alt='derevnya' />
 				<div className='small-tower'>
