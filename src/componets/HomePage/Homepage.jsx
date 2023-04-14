@@ -1,27 +1,38 @@
 import React, { useState } from 'react'
-import './Home.css'
+import { motion, useScroll } from 'framer-motion'
 import icon from '../../img/prewie.png'
 import iconForMy from '../../img/iconForMy.png'
 import Cart from '../Cart/Cart'
 import { Link } from 'react-router-dom'
 import { data } from '../Data/Data'
 import { FcReddit } from 'react-icons/fc'
+import TitleAnimated from './animated/title/TitleAnimated'
+import './Home.css'
 
 function Homepage() {
-	const {experience, block_main, block_about_me, projects} = data;
-	const [index, setIndex] = useState(0);
+	const { experience, block_main, block_about_me, projects } = data;
+	const [indexTab, setIndexTab] = useState(0);
+	const { scrollYProgress } = useScroll();
+
 	return (
 		<div className='home'>
+			<motion.div
+				className='progress-bar'
+				style={{ scaleX: scrollYProgress }}></motion.div>
 			<div className='home_container'>
 				<div className='nome_info-wrapper'>
-					<div className='nome_info-icon'>
+					<motion.div
+						className='nome_info-icon'
+						initial={{ opacity: 0, x: -200 }}
+						animate={{ opacity: 1, x: 0 }}
+						transition={{ duration: 1.1 }}>
 						<img src={icon} alt='#' />
-					</div>
+					</motion.div>
 					<div className='nome_info-text'>
 						<div className='nome_info-title'>{block_main.text.title}</div>
 						<button className='nome_info-button'>
 							<div className='nome_info-button-text'>
-								<a href="#projects">{data.block_main.text.portfolio}</a>
+								<a href='#projects'>{data.block_main.text.portfolio}</a>
 							</div>
 						</button>
 						<button className='nome_info-button nome_info-button-right'>
@@ -32,9 +43,7 @@ function Homepage() {
 					</div>
 				</div>
 
-				<p className='home_forMy-title' id='about'>
-					{block_about_me.text.title}
-				</p>
+				<TitleAnimated itemsTitle={block_about_me.text.title} id='about' />
 				<div className='home_forMy'>
 					<div className='home_forMy-text'>
 						{data.block_about_me.text.info.map((item, index) => (
@@ -48,9 +57,7 @@ function Homepage() {
 					</div>
 				</div>
 
-				<p className='home_forMy-title' id='projects'>
-					{projects.text.title}
-				</p>
+				<TitleAnimated itemsTitle={projects.text.title} id='projects' />
 				<div className='home_works'>
 					{projects.cart_info.map((cart) => (
 						<Cart
@@ -62,36 +69,37 @@ function Homepage() {
 						/>
 					))}
 				</div>
-				<p className='home_forMy-title' id='experience'>
-					{' '}
-					{experience.title}{' '}
-				</p>
+
+				<TitleAnimated itemsTitle={experience.title} id='experience' />
 				<div className='home_experience-wrapper'>
 					<div className='home_experience'>
 						{data.experience.left_side.map((item, index) => (
-							<div className='home_experience-tab' key={index}>
-								<div
-									className='home_experience-tab-text'
-									onClick={() => setIndex(index)}>
-									{item}
-								</div>
+							<div
+								className={
+									indexTab === index
+										? 'home_experience-tab active-tab'
+										: 'home_experience-tab'
+								}
+								onClick={() => setIndexTab(index)}
+								key={index}>
+								<div className='home_experience-tab-text '>{item}</div>
 							</div>
 						))}
 					</div>
 					<div className='home_experience-text'>
 						<p style={{ marginBottom: '10px' }}>
-							{experience.right_side[index].title}
+							{experience.right_side[indexTab].title}
 						</p>
 						<p style={{ marginBottom: '15px' }}>
-							{experience.right_side[index].subtitle}
+							{experience.right_side[indexTab].subtitle}
 						</p>
 						<p style={{ marginBottom: '10px' }}>
-							{experience.right_side[index].first_paragraph}
+							{experience.right_side[indexTab].first_paragraph}
 						</p>
 						<p style={{ marginBottom: '10px' }}>
-							{experience.right_side[index].second_paragraph}
+							{experience.right_side[indexTab].second_paragraph}
 						</p>
-						<p>{experience.right_side[index].third_paragraph}</p>
+						<p>{experience.right_side[indexTab].third_paragraph}</p>
 					</div>
 				</div>
 				<div className='world-link'>

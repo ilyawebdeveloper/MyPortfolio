@@ -18,7 +18,6 @@ const MyForm = () => {
     formColor.classList.add('active');
     contain.classList.add('active');
   }
-  console.log(formColor);
 
   const removeClass = () => {
     formColor.classList.remove('active');

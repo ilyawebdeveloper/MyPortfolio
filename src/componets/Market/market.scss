@@ -1,23 +1,24 @@
 .market{
-   width: 100%;
+   margin: 0 auto;
+   max-width: 1440px;
    height: fit-content;
-   position: absolute;
    display: flex;
    flex-wrap: wrap;
-   background: url('../../img/smooth.png');
+   background-color: rgb(255, 255, 255);
 
-   .market__cart{
+   &__cart{
       margin: 20px;
       border-radius: 20px;
-      background-color: #edeaf7;
+      background-color: #efefe3;
    }
-   .market__cart-item {
+   &__cart-item {
       width: 320px;
       height: 450px;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-direction: column;
+      overflow: hidden;
 
       .cart-item-title {
          font-size: 22px;
@@ -28,23 +29,50 @@
       .cart-item-image {
          width: 250px;
          height: 200px;
+         transition: all 1s ease;
+      }
+      .cart-item-image:hover {
+         width: 300px;
+         height: 250px;
       }
       .cart-item-text {
          text-align: center;
          margin: 15px;
-         font-size: 16px;
+         font-size: 14px;
+      }
+      .cart-item-button{
+         color: #2E2E2E;
+         font-weight: 500;
+         border-radius: 30px;
+         padding: 12px 50px;
+         background: linear-gradient(90deg, #FFE259 15.1%, #FFA751 85.42%);
+         cursor: pointer;
+         border: none;
+         transition: all 2s ease-in-out;
+         span{
+            font-size: larger;
+            font-weight: 600;
+         }
       }
       .cart-item-price {
-         width: 70%;
          display: flex;
-         align-items: flex-start;
+         align-items: center;
          font-size: 20px;
          font-weight: 600;
+         p{
+            font-size: 20px;
+            font-weight: 600;
+            font-family: monospace;
+            margin-left: 50px;
+         }
       }
       .cart-item-rating {
          margin-left: 20px;
          font-size: 18px;
          font-weight: 500;
+         display: flex;
+         align-items: center;
+         margin-top: 20px;
       }
       .cart-item-coursel-wrapper {
          display: flex;
@@ -63,11 +91,11 @@
       align-items: center;
       justify-content: center;
 
-      .market__info-price{
+      &__info-price{
          font-size: 22px;
          color: #e581f2;
       }
-      .market__info-raiting{
+      &__info-raiting{
          margin-left: 20px;
          font-size: 18px;
          color: #e581f2;

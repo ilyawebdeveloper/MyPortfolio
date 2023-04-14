@@ -4,6 +4,17 @@
    height: 100%;
 }
 
+.progress-bar{
+   position: fixed;
+   top: 0;
+   left: 0;
+   right: 0;
+   height: 8px;
+   background: #b05e1f;
+   transform-origin: 0%;
+   z-index: 1000;
+}
+
 .home_container{
    max-width: 1200px;
    margin: 0 auto;
@@ -71,6 +82,7 @@
    line-height: 60px;
    letter-spacing: 0.05em;
    margin-top: 180px;
+   display: flex;
 }
 
 .home_forMy {
@@ -78,6 +90,11 @@
    display: flex;
    align-items: center;
    justify-content: center;
+}
+
+.home_forMy-icon{
+   opacity: 1;
+   animation: identifier 3s ease-in-out;
 }
 
 .home_forMy-text{
@@ -108,7 +125,7 @@
    align-items: center;
    justify-content: center;
    border-left: 6px solid #2E2C2C;
-   transition: all 0.7s ease-in;
+   transition: all 0.5s ease-in-out;
    cursor: pointer;
 }
 
@@ -116,9 +133,13 @@
    border-left: 3px solid #B16932;
 }
 
+.active-tab{
+   border-left: 6px solid #B16932;
+}
+
 .home_experience-wrapper{
    display: flex;
-   margin-top: 125px;
+   margin-top: 55px;
 }
 .world-link {
    width: fit-content;

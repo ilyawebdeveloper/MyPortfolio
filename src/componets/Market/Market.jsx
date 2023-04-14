@@ -1,28 +1,24 @@
 import React from 'react'
-import axios from 'axios';
-import { useState, useEffect } from 'react';
-import "./market.scss"
-import { RiArrowLeftSLine, RiArrowRightSLine } from 'react-icons/ri'
-
+import axios from 'axios'
+import { useState, useEffect } from 'react'
+import './market.scss'
+import { AiTwotoneStar } from 'react-icons/ai'
+import Header from './header/Header'
+import { marketData } from '../Data/Data'
 
 export const Market = () => {
-   const [activePhoto, setActivePhoto] = useState(0);
-	 const nextPhoto = () => {
-			setActivePhoto(activePhoto + 1);
-	 }
-	 const lastPhoto = () => {
-			setActivePhoto(activePhoto - 1)
-		}
-   const [appState, setAppState] = useState([]);
-   useEffect(() => {
-      const apiUrl = 'https://dummyjson.com/products';
-      axios.get(apiUrl, {params: {limit: 30}}).then((resp) => {
-         const allPersons = resp.data.products;
-         setAppState(allPersons);
-      });
-   }, [setAppState]);
-   console.log(appState);
-   return (
+	const [appState, setAppState] = useState([])
+	const { text } = marketData
+	useEffect(() => {
+		const apiUrl = 'https://dummyjson.com/products'
+		axios.get(apiUrl, { params: { limit: 50 } }).then((resp) => {
+			const allPersons = resp.data.products
+			setAppState(allPersons)
+		})
+	}, [setAppState])
+	return (
+		<>
+			<Header />
 			<div className='market'>
 				{appState.map((product) => (
 					<div key={product.id} className='market__cart'>
@@ -30,27 +26,24 @@ export const Market = () => {
 							<div className='cart-item-title'>{product.title}</div>
 							<img
 								className='cart-item-image'
-								src={product.images[activePhoto]}
+								src={product.images[0]}
 								alt='productItem'
 							/>
-							<div className='cart-item-coursel-wrapper'>
-								<RiArrowLeftSLine onClick={lastPhoto} />
-								<RiArrowRightSLine onClick={nextPhoto} />
-							</div>
 							<div className='cart-item-text'>{product.description}</div>
 							<div className='cart-item-price'>
-								Price:{product.price}
-								<div className='cart-item-rating'>Rating:{product.rating}</div>
+								<button className='cart-item-button'>
+									<span>{text.buy}</span>
+								</button>
+								<p>{product.price}$</p>
+							</div>
+							<div className='cart-item-rating'>
+								{text.rating}: {product.rating}
+								<AiTwotoneStar color='#f6cd00' fontSize={26} />
 							</div>
 						</div>
-						{/* <div className='market__info'>
-							<div className='market__info-price'>Price:{product.price}</div>
-							<div className='market__info-raiting'>
-								Rating:{product.rating}/5
-							</div>
-						</div> */}
 					</div>
 				))}
 			</div>
-		)
+		</>
+	)
 }

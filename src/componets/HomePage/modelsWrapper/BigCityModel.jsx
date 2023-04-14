@@ -7,8 +7,8 @@ export default function TowerModel() {
 	return (
 		<Canvas
 			gl={{ logarithmicDepthBuffer: true }}
-			shadows
-			camera={{ position: [1.5, 0, 0], fov: 25 }}>
+			shadows={false}
+			camera={{ position: [1.5, -0.2, 0], fov: 25 }}>
 			<Stage intensity={0.5} adjustCamera={false}>
 				<BigCity />
 			</Stage>

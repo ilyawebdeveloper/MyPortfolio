@@ -8,13 +8,13 @@ export default function ChudikModel() {
 		<Canvas
 			gl={{ logarithmicDepthBuffer: true }}
 			shadows
-			camera={{ position: [1.5, 0, 1.5], fov: 25 }}>
-			<Stage intensity={0.5} adjustCamera={false}>
+			camera={{ position: [1, 0, 1], fov: 25 }}>
+			<Stage intensity={0.3} adjustCamera={false}>
 				<Chudik />
 			</Stage>
 			<OrbitControls
-				autoRotate
-				autoRotateSpeed={1.5}
+				// autoRotate
+				// autoRotateSpeed={1.5}
 				enableZoom={false}
 				enableRotate={true}
 			/>
