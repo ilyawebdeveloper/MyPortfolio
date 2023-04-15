@@ -1,7 +1,9 @@
 import formPhoto from "../../img/Снимок экрана 2022-12-24 165924.png"
 import monPricePhoto from '../../img/MonpricePhoto.png'
 import promcascadPhoto from '../../img/Promcascad.png'
-import market from '../../img/market.png'
+import market from '../../img/Market.png'
+import letter from '../../img/Letter.png'
+import myWorld from '../../img/myWorld.png'
 
 export const data = {
   block_main: {
@@ -26,10 +28,12 @@ export const data = {
       title: ["М","о","и", "П","р","о","е","к","т","ы"],
     },
     cart_info: [
-        {photo: formPhoto, text: "Форма валидации сделаная для обучения, в проекте использовался такой стек технологий: html && css && js", title: "01 MY FORM", link: "/MyForm"},
-        {photo: monPricePhoto, text: "Лендинг, созданный для записи на маникюр, создавался в качестве обучения html && css", title: "02 MON PRICE", link: "/MonPrice"},
-        {photo: promcascadPhoto, text: "Лендинг созданный для строительной компании, в проекте использовался такой стек технологий: html && css", title: "03 PROMCASCAD", link: "/Cascad"},
-        {photo: market, text: "Небольшой магазин техники, в проекте использовался такой стек технологий: React && axios && scss", title: "04 SMOLL MARKET", link: "/Market"},
+        {photo: myWorld, text: "Небольшая 3D сцена, в проекте использовался такой стек технологий: html && scss && React && react-three/drei &&react-three/fiber && react-three/postprocessing && three.js", title: "01 MY WORLD", link: "/World"},
+        {photo: market, text: "Небольшой магазин техники, в проекте использовался такой стек технологий: React && axios && scss", title: "02 SMOLL MARKET", link: "/Market"},
+        {photo: formPhoto, text: "Форма валидации сделаная для обучения, в проекте использовался такой стек технологий: html && css", title: "03 MY FORM", link: "/MyForm"},
+        {photo: promcascadPhoto, text: "Лендинг созданный для строительной компании, в проекте использовался такой стек технологий: html && css", title: "04 PROMCASCAD", link: "/Cascad"},
+        {photo: letter, text: "Письмо созданное для расслыки на почтовый клиент, в проекте использовался такой стек технологий: html && css", title: "05 LETTER", link: "/Letter"},
+        {photo: monPricePhoto, text: "Лендинг, созданный для записи на маникюр, создавался в качестве обучения html && css", title: "06 MON PRICE", link: "/MonPrice"},
       ]
   },
   experience: {

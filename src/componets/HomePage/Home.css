@@ -110,6 +110,8 @@
 .home_works{
    display: grid;
    grid-template-columns: 50% 50%;
+   overflow-y: scroll;
+   height: 950px;
 }
 
 .home_experience{
@@ -139,7 +141,7 @@
 
 .home_experience-wrapper{
    display: flex;
-   margin-top: 55px;
+   margin: 55px 0;
 }
 .world-link {
    width: fit-content;
@@ -156,6 +158,7 @@
    border-top: 2px solid white;
    display: flex;
    padding-bottom: 40px;
+   flex: 1 1;
 }
 .home_nav{
    margin-top: 46px;
@@ -181,4 +184,17 @@
    margin-top: 15px;
    display: block;
    cursor: pointer;
+}
+
+.social-icon{
+   margin-top: 5px;
+   margin-left: 10px;
+}
+
+.foter_link{
+   display: flex;
+   align-items: center;
+   margin-left: 40px;
+   height: fit-content;
+   margin-top: 90px;
 }

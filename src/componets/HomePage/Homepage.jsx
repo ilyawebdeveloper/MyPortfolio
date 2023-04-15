@@ -3,11 +3,15 @@ import { motion, useScroll } from 'framer-motion'
 import icon from '../../img/prewie.png'
 import iconForMy from '../../img/iconForMy.png'
 import Cart from '../Cart/Cart'
-import { Link } from 'react-router-dom'
 import { data } from '../Data/Data'
-import { FcReddit } from 'react-icons/fc'
 import TitleAnimated from './animated/title/TitleAnimated'
 import Loader from '../Loader/Loader'
+import {
+	TbBrandTelegram,
+	TbBrandVk,
+	TbBrandGithub,
+	TbArrowCurveLeft,
+} from 'react-icons/tb'
 import './Home.css'
 
 function Homepage() {
@@ -22,7 +26,7 @@ function Homepage() {
 					className='progress-bar'
 					style={{ scaleX: scrollYProgress }}></motion.div>
 				<div className='home_container'>
-					<div className='nome_info-wrapper'>
+					<div className='nome_info-wrapper' id='main'>
 						<motion.div
 							className='nome_info-icon'
 							initial={{ opacity: 0, x: -200 }}
@@ -104,12 +108,6 @@ function Homepage() {
 							<p>{experience.right_side[indexTab].third_paragraph}</p>
 						</div>
 					</div>
-					<div className='world-link'>
-						<Link to={'/World'} className='link'>
-							Открыть мой мир
-							<FcReddit />
-						</Link>
-					</div>
 					<div className='home_footer'>
 						<div className='home_nav'>
 							<a href='#about'>{block_about_me.text.title}</a>
@@ -121,12 +119,28 @@ function Homepage() {
 							</a>
 						</div>
 						<div className='home_contact'>
-							<a href='https://github.com/ilyawebdeveloper'>GitHub</a>
+							<a href='https://github.com/ilyawebdeveloper'>
+								GitHub
+								<span className='social-icon'>
+									<TbBrandGithub fontSize={20} />
+								</span>
+							</a>
 							<a href='https://t.me/ryzhiy17' className='margin-top'>
 								Telegram
+								<span className='social-icon'>
+									<TbBrandTelegram fontSize={20} />
+								</span>
 							</a>
-							<p className='margin-top'>Vkontakte</p>
+							<a className='margin-top' href='https://t.me/ryzhiy17'>
+								Vkontakte
+								<span className='social-icon'>
+									<TbBrandVk fontSize={20} />
+								</span>
+							</a>
 						</div>
+						<a href='#main' className='foter_link'>
+							<TbArrowCurveLeft fontSize={60} />
+						</a>
 					</div>
 				</div>
 			</div>
