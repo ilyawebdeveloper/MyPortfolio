@@ -3,22 +3,53 @@ import axios from 'axios'
 import { useState, useEffect } from 'react'
 import './market.scss'
 import { AiTwotoneStar } from 'react-icons/ai'
-import Header from './header/Header'
+import logo from '../../img/logotip-sheremetevo.png'
 import { marketData } from '../Data/Data'
 
 export const Market = () => {
 	const [appState, setAppState] = useState([])
+	const [category, setCategory] = useState('')
 	const { text } = marketData
+	const menu = [
+		'All Products',
+		'smartphones',
+		'laptops',
+		'fragrances',
+		'skincare',
+		'groceries',
+		'home-decoration',
+		'furniture',
+		'tops',
+		'womens-dresses',
+		'womens-shoes',
+	]
 	useEffect(() => {
-		const apiUrl = 'https://dummyjson.com/products'
-		axios.get(apiUrl, { params: { limit: 50 } }).then((resp) => {
+		const categoryProductUrl = `https://dummyjson.com/products/category/${category}`
+		const allProdct = 'https://dummyjson.com/products'
+		const url =
+			category.length === 0 || category === 'All Products'
+				? allProdct
+				: categoryProductUrl
+		axios.get(url, { params: { limit: 100 } }).then((resp) => {
 			const allPersons = resp.data.products
 			setAppState(allPersons)
 		})
-	}, [setAppState])
+	}, [setAppState, category])
 	return (
 		<>
-			<Header />
+			<div className='header'>
+				<img className='header__img' src={logo} alt='logoMarket' />
+				<ul className='header__menu'>
+					{menu.map((item) => (
+						<li
+							key={item}
+							className='menu-item'
+							onClick={() => setCategory(item)}>
+							{item}
+						</li>
+					))}
+				</ul>
+			</div>
 			<div className='market'>
 				{appState.map((product) => (
 					<div key={product.id} className='market__cart'>
