@@ -32,7 +32,7 @@ function Homepage() {
 							initial={{ opacity: 0, x: -200 }}
 							animate={{ opacity: 1, x: 0 }}
 							transition={{ duration: 1.1 }}>
-							<img src={icon} alt='#' />
+							<img src={icon} alt='#' className='nome_info-icon-img' />
 						</motion.div>
 						<div className='nome_info-text'>
 							<div className='nome_info-title'>{block_main.text.title}</div>
@@ -59,7 +59,7 @@ function Homepage() {
 							))}
 						</div>
 						<div className='home_forMy-icon'>
-							<img src={iconForMy} alt='#' />
+							<img src={iconForMy} alt='#' className='home_forMy-icon-img' />
 						</div>
 					</div>
 

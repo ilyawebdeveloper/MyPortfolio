@@ -198,3 +198,93 @@
    height: fit-content;
    margin-top: 90px;
 }
+
+@media (max-width: 420px) {
+   .nome_info-wrapper {
+      padding-top: 10px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+   }
+   .nome_info-icon {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      background-color: #B16932;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+   .nome_info-icon-img{
+      width: 150px;
+   }
+   .nome_info-text{
+      margin-left: 0;
+   }
+   .nome_info-title{
+      font-size: 40px;
+      line-height: 40px;
+      max-width: 300px;
+   }
+   .nome_info-button{
+      margin-top: 40px;
+   }
+   .nome_info-button-text{
+      padding: 5px 7px;
+   }
+   .home_forMy{
+      flex-direction: column-reverse;
+      align-items: flex-start;
+   }
+   .home_forMy-icon-img{
+      width: 200px;
+   }
+   .home_forMy-text{
+      width: 80%;
+      font-size: 22px;
+   }
+   .home_works{
+      grid-template-columns: 100%;
+   }
+   .link{
+      display: flex;
+      justify-content: center
+   }
+   .home_experience-wrapper{
+      flex-direction: column;
+   }
+   .home_experience-text{
+      width: 70%;
+   }
+   .home_experience{
+      flex-direction: initial;
+      width: 100%;
+      overflow-x: scroll;
+      justify-content: flex-start;
+   }
+   .home_experience-tab{
+      border-left: none;
+      border-bottom: 3px solid #2E2C2C;
+      width: 100px;
+      margin-bottom: 15px;
+      margin-left: 40px;
+   }
+   .home_experience-tab:first-child{
+      margin-left: 0;
+   }
+   .active-tab{
+      border-left: none;
+      border-bottom: 3px solid #B16932;
+   }
+   .home_experience-tab:hover {
+      border-left: none;
+      border-bottom: 3px solid #B16932;
+   }
+   .home_footer{
+      display: block;
+   }
+   .home_contact{
+      margin-left: 0;
+   }
+}
