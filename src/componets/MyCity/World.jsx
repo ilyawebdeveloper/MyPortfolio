@@ -8,6 +8,7 @@ import VolcanoModel from '../HomePage/modelsWrapper/VolcanoModel'
 import derevnya from '../../img/derevnya.jpg'
 import Loader from '../Loader/Loader'
 import './world.scss'
+import LinkToHome from '../LinkToHome/LinkToHome'
 
 function World() {
 	return (
@@ -36,6 +37,7 @@ function World() {
 					<ChudikModel />
 				</div> */}
 			</div>
+			<LinkToHome />
 		</Suspense>
 	)
 }

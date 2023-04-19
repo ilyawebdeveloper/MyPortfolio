@@ -5,6 +5,7 @@ import './market.scss'
 import { AiTwotoneStar } from 'react-icons/ai'
 import logo from '../../img/logotip-sheremetevo.png'
 import { marketData } from '../Data/Data'
+import LinkToHome from '../LinkToHome/LinkToHome'
 
 export const Market = () => {
 	const [appState, setAppState] = useState([])
@@ -37,6 +38,7 @@ export const Market = () => {
 	}, [setAppState, category])
 	return (
 		<>
+			<LinkToHome />
 			<div className='header'>
 				<img className='header__img' src={logo} alt='logoMarket' />
 				<ul className='header__menu'>
